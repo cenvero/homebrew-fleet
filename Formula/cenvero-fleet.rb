@@ -11,7 +11,7 @@ class CenveroFleet < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/cenvero/fleet/releases/download/v1.4.1/fleet_1.4.1_darwin_amd64.tar.gz"
-      sha256 "c04fe6f70dcdb8e099043c717e8c983b0a7b6ae30f3d45e499b8940fd9a49ee3"
+      sha256 "357742e6ac25181a04be6807b17232381a728f17ca658f29d78790ecd234b65d"
 
       define_method(:install) do
         bin.install "fleet"
@@ -19,7 +19,7 @@ class CenveroFleet < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/cenvero/fleet/releases/download/v1.4.1/fleet_1.4.1_darwin_arm64.tar.gz"
-      sha256 "3cabb9d07bd3991e26fb06dd39981ea90cae0fae3930a5edeb8d1cb375e2ab7c"
+      sha256 "d28b02a73f6d9ce86623f0f9fea66f0ee9b46b32dd6c34e447eb5116e4ba8445"
 
       define_method(:install) do
         bin.install "fleet"
@@ -30,14 +30,14 @@ class CenveroFleet < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/cenvero/fleet/releases/download/v1.4.1/fleet_1.4.1_linux_amd64.tar.gz"
-      sha256 "a20013e841ae104680bcf5c72ac0b29d0cba2cf6bfcb78f8315832a7c8def43d"
+      sha256 "b950bf8f5d0e9c51da334f41d239ec7cf71fc36cc9987dbedb1e95ab8453bbe0"
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/cenvero/fleet/releases/download/v1.4.1/fleet_1.4.1_linux_arm64.tar.gz"
-      sha256 "fdeaf15aeab29a74bc055df9a15f70c69d89a9053a9b3829830e005bdac1415a"
+      sha256 "11193923e9ba868e4a627466b58b1eed133de499c384a814490409de425e27d0"
       define_method(:install) do
         bin.install "fleet"
       end
