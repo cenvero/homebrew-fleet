@@ -5,21 +5,21 @@
 class CenveroFleet < Formula
   desc "Self-hosted decentralized fleet management platform"
   homepage "https://fleet.cenvero.org"
-  version "2.4.3"
+  version "2.5.0"
   license "AGPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/cenvero/fleet/releases/download/v2.4.3/fleet_2.4.3_darwin_amd64.tar.gz"
-      sha256 "cc4179f3a2dbfd336c2ede977c0c52b2f1e931fafbfec78c8be721c6b396c178"
+      url "https://github.com/cenvero/fleet/releases/download/v2.5.0/fleet_2.5.0_darwin_amd64.tar.gz"
+      sha256 "95994f3dc4d24ad9fb953917f236bdf354172253da0a2bbcd021a0239db644f5"
 
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/cenvero/fleet/releases/download/v2.4.3/fleet_2.4.3_darwin_arm64.tar.gz"
-      sha256 "ca06bb68e969abb29255e48d2c48fc8be73d60b9d4ea9938c7f07f1a58726f24"
+      url "https://github.com/cenvero/fleet/releases/download/v2.5.0/fleet_2.5.0_darwin_arm64.tar.gz"
+      sha256 "02116d78215a94e956abc516547f02e683dfbb905ef3073d16905c2e340c743f"
 
       define_method(:install) do
         bin.install "fleet"
@@ -29,15 +29,15 @@ class CenveroFleet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cenvero/fleet/releases/download/v2.4.3/fleet_2.4.3_linux_amd64.tar.gz"
-      sha256 "278f1683e21ab8323e1df527821b7c3c17e4482509665196e13101a7c08731db"
+      url "https://github.com/cenvero/fleet/releases/download/v2.5.0/fleet_2.5.0_linux_amd64.tar.gz"
+      sha256 "2b735b00efd3b48a0ce3bb64e1c14e295df93680a8dd5dc22369307d22917034"
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/cenvero/fleet/releases/download/v2.4.3/fleet_2.4.3_linux_arm64.tar.gz"
-      sha256 "d7d7f55f0fbad91e3c42fb02053c64af0cf062ea39da7a9b65bbf3ec11e0fc34"
+      url "https://github.com/cenvero/fleet/releases/download/v2.5.0/fleet_2.5.0_linux_arm64.tar.gz"
+      sha256 "9c4954240457a18b24ab96fa711510741050fe096b268be6a3695e9b49a20976"
       define_method(:install) do
         bin.install "fleet"
       end
